@@ -213,7 +213,40 @@
     background:rgba(23,16,9,.55);color:var(--copper-bright);font-size:1.05rem;line-height:1;
     display:flex;align-items:center;justify-content:center;transition:all .25s}
   .arrows button:hover{background:var(--copper);color:var(--cream);border-color:var(--copper)}
-  @media (max-width:700px){#ctr{display:none}}
+  /* ---- compact mode: phones + tablets in portrait ----
+     the floating 16:9 stage only works in landscape-ish viewports; below this
+     breakpoint (or in portrait) the stage becomes a full-bleed, per-slide
+     scrollable panel instead, so content reflows rather than shrinking to
+     an unreadable letterbox. container queries still drive type/spacing
+     since #stage keeps a definite height (100dvh), just not a 16:9 one. */
+  @media (max-width:920px), (orientation:portrait) and (max-width:1200px){
+    :root{--edge:22px}
+    #wrap{padding:0;align-items:stretch}
+    #stage{width:100vw;height:100dvh;aspect-ratio:auto;border-radius:0;box-shadow:none}
+    .slide{overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;
+      padding-top:76px;padding-bottom:104px;justify-content:flex-start}
+    .slide.center{justify-content:center}
+    .slide.photo .bg{background-attachment:scroll}
+    h1{font-size:clamp(2.7rem,15vw,5rem);letter-spacing:-.03em}
+    .poem{font-size:clamp(1.4rem,7vw,2.4rem)}
+    h2{font-size:clamp(1.5rem,6.6vw,2.2rem)}
+    .eyebrow{letter-spacing:.22em}
+    .pillars,.cols3,.days,.tracks,.layers,.arc{grid-template-columns:1fr 1fr;gap:14px}
+    .vs,.split{grid-template-columns:1fr;gap:22px}
+    .split>div:first-child{order:1}
+    .statrow{gap:22px}
+    table{font-size:.92rem}
+    .chip img{height:20px}
+    .credit{display:none}
+    #dots{bottom:14px;gap:7px}
+    #dots button{width:6px;height:6px}
+    .arrows{bottom:12px;right:14px}
+    .arrows button{width:34px;height:34px}
+    #ctr{display:none}
+  }
+  @media (max-width:560px){
+    .pillars,.cols3,.days,.tracks,.layers,.arc{grid-template-columns:1fr}
+  }
 
   /* ---- email gate: styled after coherencegathering.com ---- */
   #gate{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;
