@@ -6,12 +6,15 @@ Everything lives in `index.html` (self-contained, Google Fonts only). Source mat
 
 ## Design
 
-Redesigned from scratch off the brand guide (`sources/coherence-brand-guide.md`), not copied from the other decks:
+**Brand source of truth is the live site (coherencegathering.com), NOT `sources/coherence-brand-guide.md`** — that April doc (teal/indigo/mandala/Montserrat) is stale; the shipped brand is warm-earth. Extracted from the live site 2026-08-28:
 
-- Deep indigo night field, teal ring geometry, gold reserved for numbers and moments
-- Montserrat (structure) + Playfair Display italic (the poetic lines), per the brand guide
-- **The signature move:** one large sacred-geometry mandala sits behind the whole deck and rotates/expands as the viewer advances — the brand's "mandala activates" logo-animation concept applied to deck progress (`#mandala`, driven from `go()`)
-- No photography anywhere: the brand guide prohibits stock imagery and no approved photos exist yet, so the deck is built entirely on geometry and type
+- Colors: cream `#f6ecde` · ink `#201712` · copper `#ae7853` · taupe `#cfc2b3`
+- Fonts: **Fraunces** (wordmark tight-tracked, italic for taglines/poetic lines) + **Work Sans** (body; letterspaced uppercase eyebrows/buttons)
+- Tagline: "Connected, in spirit." · descriptor: "A 4-day gathering for designers of the New Earth…" (both verbatim from the site)
+- Assets in `media/`: `logo-symbol.png` (the copper wave mark, white keyed out) and `hero-bg.png` (the site's hero photo) — pulled from the site itself
+- Cover and close are full-bleed hero-photo slides mirroring the site; interior alternates warm-dark and cream
+- Signature move: concentric copper rings echoing the wave mark sit behind the deck and rotate/expand as the viewer advances (`#mandala`, driven from `go()`)
+- Email gate mirrors the site's "Request invitation" flow: cream card, italic Fraunces heading, ink letterspaced button
 - House style: no em dashes in copy
 
 16 slides: cover · thesis · concept · pillars · audience · market · place · program arc · lineup · community engine · business model · financials · moats · lineage (IMXP) · roadmap · close.

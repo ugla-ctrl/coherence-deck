@@ -4,42 +4,43 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>COHERENCE · Investment Deck</title>
-<meta name="description" content="COHERENCE Gathering. Modern Spiritual Communities Converge. March 19-21, 2027 · Reveille Peak Ranch, Texas Hill Country." />
+<meta name="description" content="COHERENCE Gathering. Connected, in spirit. March 19-22, 2027 · Texas Hill Country." />
 <meta property="og:title" content="COHERENCE · Investment Deck" />
-<meta property="og:description" content="Where modern spiritual communities converge. March 19-21, 2027 · Texas Hill Country." />
-<meta name="theme-color" content="#140b2b" />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%232D1B4E'/><circle cx='50' cy='50' r='26' fill='none' stroke='%231B8E9F' stroke-width='4'/><circle cx='50' cy='50' r='13' fill='none' stroke='%231B8E9F' stroke-width='3.4'/><circle cx='50' cy='50' r='4.6' fill='%23D4AF37'/></svg>" />
+<meta property="og:description" content="A gathering for designers of the New Earth. March 19-22, 2027 · Texas Hill Country." />
+<meta property="og:image" content="media/hero-bg.png" />
+<meta name="theme-color" content="#201712" />
+<link rel="icon" href="media/logo-symbol.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --indigo:#2D1B4E; --indigo-deep:#170d30; --indigo-night:#0e081d;
-    --teal:#1B8E9F; --teal-bright:#5fc4d2; --teal-soft:#8fd7e0;
-    --gold:#D4AF37; --gold-bright:#e8c85e;
-    --paper:#F5F7F8; --ink:#1A1F22; --ink-dim:#4a545c;
-    --white-dim:rgba(240,240,250,.74); --white-faint:rgba(240,240,250,.46);
-    --line-d:rgba(143,215,224,.18); --line-l:rgba(26,31,34,.13);
-    --lavender:#9B7FB8; --sage:#6B8E7F; --coral:#e0716f; --navy:#3a6491; --lime:#4fb884; --brown:#8B6F47;
-    --disp:'Montserrat','Helvetica Neue',Arial,sans-serif;
-    --serif:'Playfair Display',Georgia,serif;
+    --cream:#f6ecde; --cream-dim:rgba(246,236,222,.78); --cream-faint:rgba(246,236,222,.5);
+    --ink:#201712; --ink-dim:#5c5044; --taupe:#cfc2b3;
+    --copper:#ae7853; --copper-bright:#c9926a; --copper-deep:#8a5c3d;
+    --umber-deep:#171009; --umber:#241812; --dusk:#38281a;
+    --line-d:rgba(246,236,222,.16); --line-l:rgba(32,23,18,.14);
+    --clay:#ae7853; --sage:#7d8b6f; --ochre:#c2954a; --umber-c:#6d4a32; --rose:#b58072;
+    --olive:#5f6152; --euca:#4f6b66; --sand:#a99680; --wine:#8a5448;
+    --serif:'Fraunces',Georgia,serif;
+    --sans:'Work Sans','Helvetica Neue',Arial,sans-serif;
     --edge:clamp(26px,4.8cqw,86px);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html,body{height:100%}
-  body{background:radial-gradient(120% 140% at 50% -20%,#221443 0%,#120a26 52%,#0a0517 100%);
-    color:var(--paper);font-family:var(--disp);overflow:hidden;
+  body{background:radial-gradient(130% 150% at 50% -25%,#45301e 0%,#241812 55%,#120b06 100%);
+    color:var(--cream);font-family:var(--sans);overflow:hidden;
     -webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
   #wrap{height:100%;display:flex;align-items:center;justify-content:center;padding:clamp(10px,2.4vh,28px)}
 
   /* ---- the stage: a floating 16:9 card ---- */
   #stage{position:relative;aspect-ratio:16/9;width:min(94vw,calc(90vh*16/9));
     border-radius:16px;overflow:hidden;container-type:size;
-    background:linear-gradient(158deg,#31205a 0%,var(--indigo-deep) 58%,var(--indigo-night) 100%);
-    box-shadow:0 32px 90px rgba(0,0,0,.6),0 0 0 1px rgba(143,215,224,.10)}
+    background:linear-gradient(160deg,#3a2a1b 0%,var(--umber) 55%,var(--umber-deep) 100%);
+    box-shadow:0 32px 90px rgba(0,0,0,.62),0 0 0 1px rgba(246,236,222,.08)}
 
-  /* ---- the mandala: one geometry behind the whole deck; it turns as the story advances ---- */
-  #mandala{position:absolute;inset:-24%;z-index:0;display:flex;align-items:center;justify-content:center;
+  /* ---- the ripple: concentric rings echoing the wave mark; turns as the story advances ---- */
+  #mandala{position:absolute;inset:-26%;z-index:0;display:flex;align-items:center;justify-content:center;
     transition:transform 1.6s cubic-bezier(.22,.61,.36,1);pointer-events:none}
   #mandala svg{width:100%;height:100%}
   @media (prefers-reduced-motion:reduce){#mandala{transition:none}}
@@ -58,222 +59,225 @@
   @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
   @media (prefers-reduced-motion:reduce){.slide.active .st{animation:none}}
 
-  /* dark slides are transparent: the stage indigo and the mandala show through */
-  .slide.light{background:var(--paper);color:var(--ink)}
+  .slide.light{background:var(--cream);color:var(--ink)}
+  .slide.photo .bg{position:absolute;inset:0;z-index:0;background:url('media/hero-bg.png') center/cover no-repeat}
+  .slide.photo .shade{position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg,rgba(23,16,9,.5) 0%,rgba(23,16,9,.28) 40%,rgba(23,16,9,.72) 100%)}
+  .slide.photo>*:not(.bg):not(.shade):not(.chip):not(.fd):not(.sec):not(.coverlogo){position:relative;z-index:2}
 
   /* ---- slide chrome ---- */
-  .chip{position:absolute;top:clamp(20px,4.2cqh,44px);left:var(--edge);z-index:3;display:flex;align-items:center;gap:.6em;
-    font-weight:700;font-size:clamp(.66rem,.95cqw,.86rem);letter-spacing:.34em;color:var(--teal-soft)}
-  .chip svg{height:clamp(15px,2.4cqh,22px);width:auto;display:block}
-  .slide.light .chip{color:var(--teal)}
+  .chip{position:absolute;top:clamp(20px,4.2cqh,44px);left:var(--edge);z-index:3;display:flex;align-items:center;gap:.7em;
+    font-weight:500;font-size:clamp(.64rem,.92cqw,.84rem);letter-spacing:.3em;color:var(--cream-dim)}
+  .chip img{height:clamp(20px,3.4cqh,30px);width:auto;display:block}
+  .slide.light .chip{color:var(--ink-dim)}
   .fd{position:absolute;bottom:clamp(18px,3.8cqh,40px);right:var(--edge);z-index:3;
-    font-weight:600;font-size:clamp(.6rem,.85cqw,.78rem);letter-spacing:.22em;color:var(--white-faint)}
+    font-weight:500;font-size:clamp(.58rem,.82cqw,.76rem);letter-spacing:.24em;text-transform:uppercase;color:var(--cream-faint)}
   .sec{position:absolute;bottom:clamp(18px,3.8cqh,40px);left:var(--edge);z-index:3;
-    font-weight:600;font-size:clamp(.6rem,.85cqw,.78rem);letter-spacing:.22em;color:var(--white-faint)}
-  .slide.light .fd,.slide.light .sec{color:rgba(26,31,34,.42)}
+    font-weight:500;font-size:clamp(.58rem,.82cqw,.76rem);letter-spacing:.24em;text-transform:uppercase;color:var(--cream-faint)}
+  .slide.light .fd,.slide.light .sec{color:rgba(32,23,18,.4)}
 
   /* ---- type system ---- */
-  .eyebrow{font-weight:700;font-size:clamp(.66rem,1cqw,.9rem);letter-spacing:.4em;color:var(--gold-bright);
+  .eyebrow{font-weight:500;font-size:clamp(.64rem,.95cqw,.86rem);letter-spacing:.32em;color:var(--copper-bright);
     text-transform:uppercase;margin-bottom:clamp(14px,2.6cqh,26px)}
-  .slide.light .eyebrow{color:var(--teal)}
-  h1{font-weight:200;letter-spacing:.24em;line-height:1.06;font-size:clamp(2.6rem,7.8cqw,7rem);text-indent:.24em;text-align:center}
-  h2{font-weight:800;letter-spacing:-.015em;line-height:1.12;font-size:clamp(1.6rem,3.9cqw,3.4rem);max-width:24ch}
-  .poem{font-family:var(--serif);font-style:italic;font-weight:400;line-height:1.3;
+  .slide.light .eyebrow{color:var(--copper-deep)}
+  h1{font-family:var(--serif);font-weight:400;letter-spacing:-.04em;line-height:1;
+    font-size:clamp(3.4rem,10.4cqw,9.2rem);text-align:center}
+  h2{font-family:var(--serif);font-weight:500;letter-spacing:-.02em;line-height:1.12;
+    font-size:clamp(1.7rem,4.1cqw,3.6rem);max-width:22ch}
+  .poem{font-family:var(--serif);font-style:italic;font-weight:400;line-height:1.28;letter-spacing:-.01em;
     font-size:clamp(1.7rem,4.4cqw,3.9rem);max-width:22ch}
-  .poem em{font-style:italic;color:var(--gold-bright)}
-  .slide.light .poem em{color:var(--teal)}
-  .sub{font-weight:500;line-height:1.55;font-size:clamp(.95rem,1.7cqw,1.45rem);color:var(--white-dim);max-width:52ch;
+  .poem em{font-style:italic;color:var(--copper-bright)}
+  .slide.light .poem em{color:var(--copper-deep)}
+  .tagline{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--copper-bright);
+    font-size:clamp(1.1rem,2.4cqw,2.1rem);letter-spacing:-.01em}
+  .sub{font-weight:400;line-height:1.6;font-size:clamp(.92rem,1.6cqw,1.4rem);color:var(--cream-dim);max-width:54ch;
     margin-top:clamp(12px,2.4cqh,24px)}
   .slide.light .sub{color:var(--ink-dim)}
-  p{font-weight:400;line-height:1.6;font-size:clamp(.86rem,1.2cqw,1.08rem);color:var(--white-dim);max-width:60ch}
+  p{font-weight:400;line-height:1.6;font-size:clamp(.84rem,1.18cqw,1.06rem);color:var(--cream-dim);max-width:60ch}
   .slide.light p{color:var(--ink-dim)}
-  p strong,.sub strong{font-weight:700;color:#fff}
+  p strong,.sub strong{font-weight:600;color:var(--cream)}
   .slide.light p strong,.slide.light .sub strong{color:var(--ink)}
 
   /* ---- components ---- */
   .statrow{display:flex;gap:clamp(22px,4.4cqw,68px);margin-top:clamp(24px,5cqh,56px);flex-wrap:wrap}
-  .stat .n{font-weight:800;font-size:clamp(1.4rem,3cqw,2.7rem);letter-spacing:-.01em;color:var(--gold-bright)}
-  .slide.light .stat .n{color:var(--teal)}
-  .stat .l{margin-top:.4em;font-weight:600;font-size:clamp(.62rem,.88cqw,.8rem);letter-spacing:.16em;
-    text-transform:uppercase;color:var(--white-faint)}
-  .slide.light .stat .l{color:rgba(26,31,34,.5)}
+  .stat .n{font-family:var(--serif);font-weight:500;font-size:clamp(1.5rem,3.2cqw,2.9rem);letter-spacing:-.02em;color:var(--copper-bright)}
+  .slide.light .stat .n{color:var(--copper-deep)}
+  .slide.photo .stat .n{color:var(--cream)}
+  .stat .l{margin-top:.4em;font-weight:500;font-size:clamp(.6rem,.86cqw,.78rem);letter-spacing:.18em;
+    text-transform:uppercase;color:var(--cream-faint)}
+  .slide.light .stat .l{color:rgba(32,23,18,.48)}
 
   .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.8cqw,28px);margin-top:clamp(22px,4.4cqh,46px)}
-  .pillar{border:1px solid var(--line-d);border-radius:14px;padding:clamp(16px,2cqw,30px);
-    background:rgba(14,8,29,.5);backdrop-filter:blur(2px)}
+  .pillar{border:1px solid var(--line-d);border-radius:12px;padding:clamp(16px,2cqw,30px);
+    background:rgba(23,16,9,.42)}
   .pillar .ring{width:clamp(34px,4.4cqw,58px);height:clamp(34px,4.4cqw,58px);margin-bottom:clamp(10px,1.8cqh,18px)}
-  .pillar h3{font-weight:800;font-size:clamp(.98rem,1.6cqw,1.45rem);letter-spacing:.06em;margin-bottom:.4em}
+  .pillar h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.05rem,1.75cqw,1.6rem);letter-spacing:-.01em;margin-bottom:.4em;color:var(--cream)}
   .pillar p{font-size:clamp(.72rem,.98cqw,.9rem)}
 
   .cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.2cqw,34px);margin-top:clamp(20px,4cqh,42px)}
-  .col h3{font-weight:800;font-size:clamp(.95rem,1.5cqw,1.35rem);letter-spacing:.14em;text-transform:uppercase;
-    color:var(--teal-soft);margin-bottom:clamp(8px,1.6cqh,14px)}
+  .col h3{font-weight:600;font-size:clamp(.78rem,1.2cqw,1.1rem);letter-spacing:.2em;text-transform:uppercase;
+    color:var(--copper-bright);margin-bottom:clamp(8px,1.6cqh,14px)}
   .col ul{list-style:none}
-  .col li{padding:.42em 0;font-size:clamp(.78rem,1.08cqw,.98rem);color:var(--white-dim);
+  .col li{padding:.42em 0;font-size:clamp(.78rem,1.08cqw,.98rem);color:var(--cream-dim);
     border-bottom:1px solid var(--line-d);font-weight:400}
   .col li:last-child{border-bottom:none}
 
   .meets{margin-top:clamp(20px,4cqh,40px);font-family:var(--serif);font-style:italic;
-    font-size:clamp(1rem,1.9cqw,1.7rem);color:var(--gold-bright);line-height:1.45}
+    font-size:clamp(1rem,1.9cqw,1.7rem);color:var(--copper-bright);line-height:1.45}
 
   .vs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.6cqw,40px);margin-top:clamp(20px,4cqh,40px)}
-  .vs .side{border-radius:14px;padding:clamp(16px,2cqw,28px)}
-  .vs .them{border:1px solid var(--line-l);background:#fff}
-  .vs .us{background:var(--indigo);color:var(--paper);box-shadow:0 18px 44px rgba(45,27,78,.28)}
-  .vs h3{font-weight:800;font-size:clamp(.8rem,1.2cqw,1.05rem);letter-spacing:.2em;text-transform:uppercase;margin-bottom:clamp(8px,1.6cqh,14px)}
-  .vs .them h3{color:rgba(26,31,34,.45)}
-  .vs .us h3{color:var(--gold-bright)}
+  .vs .side{border-radius:12px;padding:clamp(16px,2cqw,28px)}
+  .vs .them{border:1px solid var(--line-l);background:rgba(255,255,255,.5)}
+  .vs .us{background:var(--ink);color:var(--cream);box-shadow:0 18px 44px rgba(32,23,18,.3)}
+  .vs h3{font-weight:600;font-size:clamp(.72rem,1.1cqw,.98rem);letter-spacing:.22em;text-transform:uppercase;margin-bottom:clamp(8px,1.6cqh,14px)}
+  .vs .them h3{color:rgba(32,23,18,.44)}
+  .vs .us h3{color:var(--copper-bright)}
   .vs ul{list-style:none}
   .vs li{padding:.44em 0;font-size:clamp(.74rem,1.02cqw,.94rem);line-height:1.45}
   .vs .them li{color:var(--ink-dim);border-bottom:1px solid var(--line-l)}
-  .vs .us li{color:var(--white-dim);border-bottom:1px solid rgba(240,240,250,.14)}
+  .vs .us li{color:rgba(246,236,222,.75);border-bottom:1px solid rgba(246,236,222,.14)}
   .vs li:last-child{border-bottom:none}
-  .vs .us li b{color:#fff;font-weight:700}
+  .vs .us li b{color:var(--cream);font-weight:600}
 
   .days{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2cqw,30px);margin-top:clamp(20px,4cqh,42px)}
-  .day{border-left:2px solid var(--teal);padding-left:clamp(12px,1.6cqw,22px)}
-  .day .dn{font-weight:700;font-size:clamp(.62rem,.9cqw,.82rem);letter-spacing:.3em;color:var(--teal-soft);text-transform:uppercase}
-  .day h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.25rem,2.5cqw,2.2rem);
-    margin:.24em 0 .4em;color:#fff}
+  .day{border-left:2px solid var(--copper);padding-left:clamp(12px,1.6cqw,22px)}
+  .day .dn{font-weight:500;font-size:clamp(.6rem,.88cqw,.8rem);letter-spacing:.3em;color:var(--copper-bright);text-transform:uppercase}
+  .day h3{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.3rem,2.6cqw,2.3rem);
+    margin:.22em 0 .38em;color:var(--cream)}
   .day p{font-size:clamp(.74rem,1.02cqw,.94rem)}
 
   .tracks{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1.3cqw,20px);margin-top:clamp(18px,3.6cqh,38px)}
-  .track{display:flex;align-items:center;gap:.7em;border:1px solid var(--line-l);border-radius:11px;
-    padding:clamp(10px,1.3cqw,18px);background:#fff}
+  .track{display:flex;align-items:center;gap:.7em;border:1px solid var(--line-l);border-radius:10px;
+    padding:clamp(10px,1.3cqw,18px);background:rgba(255,255,255,.55)}
   .track .dot{flex:none;width:clamp(9px,1.15cqw,13px);height:clamp(9px,1.15cqw,13px);border-radius:50%}
-  .track .t{font-weight:600;font-size:clamp(.7rem,.98cqw,.92rem);color:var(--ink)}
-  .track .c{margin-left:auto;font-weight:800;font-size:clamp(.7rem,.98cqw,.92rem);color:var(--teal)}
+  .track .t{font-weight:500;font-size:clamp(.7rem,.98cqw,.92rem);color:var(--ink)}
+  .track .c{margin-left:auto;font-family:var(--serif);font-weight:500;font-size:clamp(.78rem,1.1cqw,1rem);color:var(--copper-deep)}
 
   .layers{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.9cqw,30px);margin-top:clamp(18px,3.4cqh,36px)}
-  .layer{border-radius:14px;border:1px solid var(--line-l);background:#fff;padding:clamp(15px,1.9cqw,28px)}
-  .layer .n{font-weight:900;font-size:clamp(1.5rem,3.1cqw,2.8rem);color:var(--indigo);letter-spacing:-.01em}
-  .layer h3{font-weight:800;font-size:clamp(.86rem,1.3cqw,1.15rem);margin:.3em 0 .35em;color:var(--ink)}
+  .layer{border-radius:12px;border:1px solid var(--line-l);background:rgba(255,255,255,.55);padding:clamp(15px,1.9cqw,28px)}
+  .layer .n{font-family:var(--serif);font-weight:500;font-size:clamp(1.6rem,3.3cqw,3rem);color:var(--copper-deep);letter-spacing:-.02em}
+  .layer h3{font-weight:600;font-size:clamp(.84rem,1.28cqw,1.12rem);margin:.3em 0 .35em;color:var(--ink)}
   .layer p{font-size:clamp(.7rem,.95cqw,.88rem)}
 
   .arc{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2cqw,32px);margin-top:clamp(20px,4cqh,42px)}
-  .phase{border-top:2px solid var(--gold);padding-top:clamp(10px,1.8cqh,18px)}
-  .phase .pn{font-weight:700;font-size:clamp(.6rem,.86cqw,.78rem);letter-spacing:.28em;color:var(--gold-bright);text-transform:uppercase}
-  .phase h3{font-weight:800;font-size:clamp(.95rem,1.5cqw,1.3rem);margin:.35em 0 .4em}
-  .phase p,.phase li{font-size:clamp(.72rem,1cqw,.92rem);color:var(--white-dim)}
+  .phase{border-top:2px solid var(--copper);padding-top:clamp(10px,1.8cqh,18px)}
+  .phase .pn{font-weight:500;font-size:clamp(.58rem,.84cqw,.76rem);letter-spacing:.28em;color:var(--copper-bright);text-transform:uppercase}
+  .phase h3{font-family:var(--serif);font-weight:500;font-size:clamp(1rem,1.6cqw,1.4rem);margin:.35em 0 .4em;color:var(--cream)}
+  .phase p,.phase li{font-size:clamp(.72rem,1cqw,.92rem);color:var(--cream-dim)}
   .phase ul{list-style:none;margin-top:.2em}
   .phase li{padding:.3em 0;border-bottom:1px solid var(--line-d)}
   .phase li:last-child{border-bottom:none}
 
   table{border-collapse:collapse;width:100%;margin-top:clamp(16px,3.2cqh,34px)}
-  th{font-weight:700;font-size:clamp(.6rem,.85cqw,.78rem);letter-spacing:.18em;text-transform:uppercase;
-    color:rgba(26,31,34,.45);text-align:left;padding:.5em .9em .5em 0;border-bottom:2px solid var(--indigo)}
+  th{font-weight:500;font-size:clamp(.58rem,.82cqw,.76rem);letter-spacing:.2em;text-transform:uppercase;
+    color:rgba(32,23,18,.44);text-align:left;padding:.5em .9em .5em 0;border-bottom:2px solid var(--ink)}
   td{font-size:clamp(.76rem,1.08cqw,1rem);color:var(--ink-dim);padding:clamp(.45em,1.1cqh,.7em) .9em clamp(.45em,1.1cqh,.7em) 0;
     border-bottom:1px solid var(--line-l)}
-  td b{color:var(--ink);font-weight:700}
-  td.num{font-weight:700;color:var(--teal);white-space:nowrap}
-  tr.total td{border-bottom:none;border-top:2px solid var(--indigo);font-weight:800;color:var(--ink)}
-  tr.total td.num{color:#9c7d16;font-size:clamp(.9rem,1.4cqw,1.25rem)}
+  td b{color:var(--ink);font-weight:600}
+  td.num{font-weight:600;color:var(--copper-deep);white-space:nowrap}
+  tr.total td{border-bottom:none;border-top:2px solid var(--ink);font-weight:600;color:var(--ink)}
+  tr.total td.num{font-family:var(--serif);font-weight:500;color:var(--ink);font-size:clamp(.95rem,1.5cqw,1.3rem)}
 
   .split{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(24px,4cqw,64px);align-items:center}
   .blist{list-style:none;margin-top:clamp(14px,2.8cqh,28px)}
   .blist li{position:relative;padding:.52em 0 .52em 1.5em;font-size:clamp(.8rem,1.14cqw,1.02rem);
-    line-height:1.5;color:var(--white-dim);border-bottom:1px solid var(--line-d)}
+    line-height:1.5;color:var(--cream-dim);border-bottom:1px solid var(--line-d)}
   .blist li:last-child{border-bottom:none}
-  .blist li::before{content:'';position:absolute;left:0;top:1.05em;width:.52em;height:.52em;border-radius:50%;
-    border:1.5px solid var(--teal-bright)}
-  .blist li b{color:#fff;font-weight:700}
+  .blist li::before{content:'';position:absolute;left:0;top:1.05em;width:.5em;height:.5em;border-radius:50%;
+    border:1.5px solid var(--copper-bright)}
+  .blist li b{color:var(--cream);font-weight:600}
   .slide.light .blist li{color:var(--ink-dim);border-bottom-color:var(--line-l)}
   .slide.light .blist li b{color:var(--ink)}
-  .slide.light .blist li::before{border-color:var(--teal)}
-
-  .wave{width:clamp(90px,14cqw,190px);height:auto;margin:clamp(14px,2.8cqh,28px) 0;opacity:.8}
+  .slide.light .blist li::before{border-color:var(--copper-deep)}
 
   .center{align-items:center;text-align:center}
   .center h2,.center .poem,.center p,.center .sub{margin-left:auto;margin-right:auto}
 
-  .contact{margin-top:clamp(24px,5cqh,52px);font-weight:500;font-size:clamp(.9rem,1.5cqw,1.3rem);color:var(--white-dim)}
-  .contact a{color:#fff;text-decoration:underline;text-decoration-color:var(--teal-bright);text-underline-offset:.25em}
+  .contact{margin-top:clamp(24px,5cqh,52px);font-weight:400;font-size:clamp(.9rem,1.5cqw,1.3rem);color:var(--cream-dim)}
+  .contact a{color:var(--cream);text-decoration:underline;text-decoration-color:var(--copper-bright);text-underline-offset:.25em}
+
+  .coverlogo{position:absolute;top:clamp(20px,4.2cqh,44px);left:var(--edge);z-index:3;height:clamp(34px,6cqh,54px)}
 
   /* ---- navigation chrome ---- */
   #ctr{position:fixed;left:clamp(16px,2.4vw,34px);bottom:clamp(14px,2.4vh,26px);z-index:20;
-    font-weight:600;font-size:.72rem;letter-spacing:.26em;color:rgba(240,240,250,.42)}
+    font-weight:500;font-size:.7rem;letter-spacing:.26em;color:rgba(246,236,222,.4)}
   #dots{position:fixed;left:50%;transform:translateX(-50%);bottom:clamp(14px,2.4vh,26px);z-index:20;display:flex;gap:9px}
   #dots button{width:7px;height:7px;border-radius:50%;border:none;cursor:pointer;padding:0;
-    background:rgba(240,240,250,.22);transition:all .35s}
-  #dots button.on{background:var(--gold-bright);transform:scale(1.45)}
+    background:rgba(246,236,222,.22);transition:all .35s}
+  #dots button.on{background:var(--copper-bright);transform:scale(1.45)}
   .arrows{position:fixed;right:clamp(16px,2.4vw,34px);bottom:clamp(10px,2vh,20px);z-index:20;display:flex;gap:8px}
-  .arrows button{width:38px;height:38px;border-radius:50%;border:1px solid rgba(143,215,224,.3);cursor:pointer;
-    background:rgba(20,11,43,.6);color:var(--teal-soft);font-size:1.05rem;line-height:1;
+  .arrows button{width:38px;height:38px;border-radius:50%;border:1px solid rgba(201,146,106,.35);cursor:pointer;
+    background:rgba(23,16,9,.55);color:var(--copper-bright);font-size:1.05rem;line-height:1;
     display:flex;align-items:center;justify-content:center;transition:all .25s}
-  .arrows button:hover{background:var(--teal);color:#fff;border-color:var(--teal)}
+  .arrows button:hover{background:var(--copper);color:var(--cream);border-color:var(--copper)}
   @media (max-width:700px){#ctr{display:none}}
 
-  /* ---- email gate ---- */
+  /* ---- email gate: styled after coherencegathering.com ---- */
   #gate{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;
-    background:radial-gradient(120% 140% at 50% -20%,rgba(34,20,67,.97) 0%,rgba(10,5,23,.985) 70%);
-    backdrop-filter:blur(10px);transition:opacity .5s ease,visibility .5s}
+    background:url('media/hero-bg.png') center/cover no-repeat;transition:opacity .5s ease,visibility .5s}
+  #gate::before{content:'';position:absolute;inset:0;background:rgba(23,16,9,.66);backdrop-filter:blur(3px)}
   #gate.hide{opacity:0;visibility:hidden;pointer-events:none}
-  #gate .card{width:min(92vw,420px);background:rgba(23,13,48,.92);border:1px solid rgba(143,215,224,.16);
-    border-radius:18px;padding:40px 36px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.55)}
-  #gate .gmark{height:52px;margin:0 auto 14px}
-  #gate .gsub{font-weight:700;font-size:.62rem;letter-spacing:.4em;color:var(--teal-soft);text-transform:uppercase;margin-bottom:20px}
-  #gate h2{font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.5rem;letter-spacing:0;color:#fff;max-width:none;margin-bottom:.4em}
-  #gate p{font-size:.85rem;color:var(--white-dim);max-width:none;margin-bottom:18px}
-  #gate input{width:100%;margin-bottom:10px;padding:13px 16px;border-radius:10px;font-size:.92rem;
-    border:1px solid rgba(143,215,224,.22);background:rgba(10,5,23,.6);color:#fff;font-family:var(--disp);outline:none}
-  #gate input:focus{border-color:var(--teal-bright)}
-  #gate input::placeholder{color:rgba(240,240,250,.35)}
-  #gate .err{min-height:1.1em;font-size:.74rem;color:#e8927c;margin-bottom:6px}
-  #gate button{width:100%;padding:13px;border:none;border-radius:10px;cursor:pointer;
-    background:var(--teal);color:#fff;font-family:var(--disp);font-weight:700;font-size:.95rem;letter-spacing:.04em;transition:background .25s}
-  #gate button:hover{background:#23a2b4}
+  #gate .card{position:relative;width:min(92vw,430px);background:var(--cream);
+    border-radius:6px;padding:42px 38px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+  #gate .gmark{height:56px;margin:0 auto 12px;display:block}
+  #gate .gsub{font-weight:500;font-size:.6rem;letter-spacing:.38em;color:var(--copper-deep);text-transform:uppercase;margin-bottom:18px}
+  #gate h2{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.6rem;letter-spacing:-.01em;color:var(--ink);max-width:none;margin-bottom:.35em}
+  #gate p{font-size:.85rem;color:var(--ink-dim);max-width:none;margin-bottom:18px}
+  #gate input{width:100%;margin-bottom:10px;padding:13px 16px;border-radius:3px;font-size:.92rem;
+    border:1px solid rgba(32,23,18,.22);background:#fff;color:var(--ink);font-family:var(--sans);outline:none}
+  #gate input:focus{border-color:var(--copper)}
+  #gate input::placeholder{color:rgba(32,23,18,.35)}
+  #gate .err{min-height:1.1em;font-size:.74rem;color:#9c4a33;margin-bottom:6px}
+  #gate button{width:100%;padding:14px;border:none;border-radius:3px;cursor:pointer;
+    background:var(--ink);color:var(--cream);font-family:var(--sans);font-weight:500;font-size:.8rem;
+    letter-spacing:.22em;text-transform:uppercase;transition:background .25s}
+  #gate button:hover{background:#392a1f}
   #gate button:disabled{opacity:.6;cursor:default}
-  #gate .fine{margin-top:14px;font-size:.68rem;color:rgba(240,240,250,.38)}
+  #gate .fine{margin-top:14px;font-size:.68rem;color:rgba(32,23,18,.42)}
 </style>
 </head>
 <body>
 
 <div id="wrap"><div id="stage">
 
-  <!-- the mandala: turns and grows as the deck advances -->
+  <!-- the ripple: rings echoing the wave mark; turns and grows as the deck advances -->
   <div id="mandala" aria-hidden="true">
     <svg viewBox="0 0 1000 1000" fill="none">
-      <g stroke="#5fc4d2" stroke-opacity=".13">
-        <circle cx="500" cy="500" r="88"  stroke-width="1.4"/>
-        <circle cx="500" cy="500" r="176" stroke-width="1.2"/>
-        <circle cx="500" cy="500" r="264" stroke-width="1"/>
-        <circle cx="500" cy="500" r="352" stroke-width=".9"/>
-        <circle cx="500" cy="500" r="440" stroke-width=".8"/>
+      <g stroke="#c9926a" stroke-opacity=".10">
+        <circle cx="500" cy="500" r="90"  stroke-width="1.5"/>
+        <circle cx="512" cy="488" r="164" stroke-width="1.3"/>
+        <circle cx="490" cy="512" r="242" stroke-width="1.1"/>
+        <circle cx="508" cy="494" r="326" stroke-width="1"/>
+        <circle cx="494" cy="506" r="412" stroke-width=".9"/>
+        <circle cx="500" cy="500" r="480" stroke-width=".8"/>
       </g>
-      <!-- 8 directions: petal circles on the second ring, flower-of-life spacing -->
-      <g stroke="#5fc4d2" stroke-opacity=".10" stroke-width="1">
-        <circle cx="500" cy="324" r="88"/><circle cx="500" cy="676" r="88"/>
-        <circle cx="324" cy="500" r="88"/><circle cx="676" cy="500" r="88"/>
-        <circle cx="624.5" cy="375.5" r="88"/><circle cx="375.5" cy="624.5" r="88"/>
-        <circle cx="624.5" cy="624.5" r="88"/><circle cx="375.5" cy="375.5" r="88"/>
+      <g stroke="#c9926a" stroke-opacity=".07" stroke-width="1.1">
+        <path d="M260 640 C330 520 470 470 600 520 C540 500 470 520 430 580"/>
+        <path d="M320 700 C400 560 580 520 720 590 C640 560 540 590 490 660"/>
       </g>
-      <g fill="#D4AF37">
-        <circle cx="500" cy="500" r="5" fill-opacity=".9"/>
-        <circle cx="500" cy="324" r="2.6" fill-opacity=".5"/><circle cx="500" cy="676" r="2.6" fill-opacity=".5"/>
-        <circle cx="324" cy="500" r="2.6" fill-opacity=".5"/><circle cx="676" cy="500" r="2.6" fill-opacity=".5"/>
-        <circle cx="624.5" cy="375.5" r="2.6" fill-opacity=".5"/><circle cx="375.5" cy="624.5" r="2.6" fill-opacity=".5"/>
-        <circle cx="624.5" cy="624.5" r="2.6" fill-opacity=".5"/><circle cx="375.5" cy="375.5" r="2.6" fill-opacity=".5"/>
-      </g>
+      <circle cx="500" cy="500" r="4.5" fill="#c9926a" fill-opacity=".55"/>
     </svg>
   </div>
 
-  <!-- 01 · cover -->
-  <section class="slide center active">
-    <div class="chip"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7.5" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="20" r="2.4" fill="#D4AF37"/></svg></div>
-    <div class="st eyebrow">March 19 to 21, 2027 · Spring Equinox</div>
+  <!-- 01 · cover: mirrors coherencegathering.com -->
+  <section class="slide photo center active">
+    <div class="bg"></div><div class="shade"></div>
+    <img class="coverlogo" src="media/logo-symbol.png" alt="Coherence" />
+    <div class="st eyebrow" style="color:var(--cream-dim)">March 19 to 22, 2027 · Texas Hill Country</div>
     <h1 class="st">COHERENCE</h1>
-    <div class="st sub" style="letter-spacing:.3em;text-transform:uppercase;font-size:clamp(.72rem,1.25cqw,1.05rem);font-weight:600;color:var(--teal-soft)">Modern Spiritual Communities Converge</div>
-    <div class="st statrow" style="justify-content:center">
-      <div class="stat"><div class="n">3 days</div><div class="l">One gathering</div></div>
+    <div class="st tagline" style="margin-top:.2em">Connected, in spirit.</div>
+    <p class="st sub" style="max-width:46ch">A 4-day gathering for designers of the New Earth to align, connect, and co-create on the Spring Equinox.</p>
+    <div class="st statrow" style="justify-content:center;margin-top:clamp(20px,4cqh,44px)">
       <div class="stat"><div class="n">650</div><div class="l">Attendees, year one</div></div>
-      <div class="stat"><div class="n">1,300 acres</div><div class="l">Reveille Peak Ranch, TX</div></div>
+      <div class="stat"><div class="n">1,300 acres</div><div class="l">Reveille Peak Ranch</div></div>
+      <div class="stat"><div class="n">1 hour</div><div class="l">From Austin</div></div>
     </div>
     <div class="fd">Investment Deck</div>
   </section>
 
   <!-- 02 · thesis -->
   <section class="slide">
-    <div class="chip"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7.5" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="20" r="2.4" fill="#D4AF37"/></svg> COHERENCE</div>
+    <div class="chip"><img src="media/logo-symbol.png" alt=""/> COHERENCE</div>
     <div class="st eyebrow">The Thesis</div>
     <div class="st poem">In a world of fragmentation, <em>coherence</em> is the scarcest resource.</div>
     <p class="st sub">The fastest-growing movements of our time (consciousness, crypto, AI, climate) are failing to connect. They hold parallel visions of the future with no shared infrastructure between them.</p>
@@ -283,9 +287,9 @@
 
   <!-- 03 · what is coherence -->
   <section class="slide light">
-    <div class="chip"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7.5" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="20" r="2.4" fill="#D4AF37"/></svg> COHERENCE</div>
+    <div class="chip"><img src="media/logo-symbol.png" alt=""/> COHERENCE</div>
     <div class="st eyebrow">What It Is</div>
-    <h2 class="st">A three-day transformational working gathering.</h2>
+    <h2 class="st">A transformational working gathering.</h2>
     <p class="st sub">Not a festival. Not a conference. Not a retreat. A curated convergence where modern spiritual communities, the builders and the contemplatives, do real work together.</p>
     <div class="st vs">
       <div class="side them">
@@ -312,24 +316,24 @@
 
   <!-- 04 · four pillars -->
   <section class="slide">
-    <div class="chip"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7.5" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="20" r="2.4" fill="#D4AF37"/></svg> COHERENCE</div>
+    <div class="chip"><img src="media/logo-symbol.png" alt=""/> COHERENCE</div>
     <div class="st eyebrow">The Experience Arc</div>
     <h2 class="st">Four movements, one field.</h2>
     <div class="st pillars">
       <div class="pillar">
-        <svg class="ring" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="6" stroke="#5fc4d2" stroke-width="2"/><circle cx="30" cy="30" r="4" fill="#D4AF37" fill-opacity=".0"/></svg>
+        <svg class="ring" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="6" stroke="#c9926a" stroke-width="2"/></svg>
         <h3>Align</h3><p>Shared values, vision, and intention setting. The center point.</p>
       </div>
       <div class="pillar">
-        <svg class="ring" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="6" stroke="#5fc4d2" stroke-width="2"/><circle cx="30" cy="30" r="14" stroke="#5fc4d2" stroke-width="1.6" stroke-opacity=".7"/></svg>
+        <svg class="ring" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="6" stroke="#c9926a" stroke-width="2"/><circle cx="32" cy="28" r="14" stroke="#c9926a" stroke-width="1.6" stroke-opacity=".7"/></svg>
         <h3>Connect</h3><p>Deep relationships across silos. The first ring expands.</p>
       </div>
       <div class="pillar">
-        <svg class="ring" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="6" stroke="#5fc4d2" stroke-width="2"/><circle cx="30" cy="30" r="14" stroke="#5fc4d2" stroke-width="1.6" stroke-opacity=".7"/><circle cx="30" cy="30" r="22" stroke="#5fc4d2" stroke-width="1.3" stroke-opacity=".5"/></svg>
+        <svg class="ring" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="6" stroke="#c9926a" stroke-width="2"/><circle cx="32" cy="28" r="14" stroke="#c9926a" stroke-width="1.6" stroke-opacity=".7"/><circle cx="28" cy="32" r="22" stroke="#c9926a" stroke-width="1.3" stroke-opacity=".5"/></svg>
         <h3>Collaborate</h3><p>Workshops, circles, and co-creation. Projects take form.</p>
       </div>
       <div class="pillar">
-        <svg class="ring" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="6" stroke="#5fc4d2" stroke-width="2"/><circle cx="30" cy="30" r="14" stroke="#5fc4d2" stroke-width="1.6" stroke-opacity=".7"/><circle cx="30" cy="30" r="22" stroke="#5fc4d2" stroke-width="1.3" stroke-opacity=".5"/><circle cx="30" cy="30" r="28.5" stroke="#D4AF37" stroke-width="1.4" stroke-opacity=".85"/></svg>
+        <svg class="ring" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="6" stroke="#c9926a" stroke-width="2"/><circle cx="32" cy="28" r="14" stroke="#c9926a" stroke-width="1.6" stroke-opacity=".7"/><circle cx="28" cy="32" r="22" stroke="#c9926a" stroke-width="1.3" stroke-opacity=".5"/><circle cx="30" cy="30" r="28.5" stroke="#c9926a" stroke-width="1.5"/></svg>
         <h3>Emerge</h3><p>New ideas, partnerships, and momentum leave with everyone.</p>
       </div>
     </div>
@@ -338,9 +342,9 @@
 
   <!-- 05 · who converges -->
   <section class="slide">
-    <div class="chip"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7.5" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="20" r="2.4" fill="#D4AF37"/></svg> COHERENCE</div>
+    <div class="chip"><img src="media/logo-symbol.png" alt=""/> COHERENCE</div>
     <div class="st eyebrow">The Audience</div>
-    <h2 class="st">Who converges.</h2>
+    <h2 class="st">Designers of the New Earth.</h2>
     <div class="st cols3">
       <div class="col"><h3>Contemplatives</h3>
         <ul><li>Meditators</li><li>Consciousness researchers</li><li>Spiritual teachers</li><li>Healers and somatic practitioners</li></ul></div>
@@ -355,7 +359,7 @@
 
   <!-- 06 · market whitespace -->
   <section class="slide light">
-    <div class="chip"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7.5" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="20" r="2.4" fill="#D4AF37"/></svg> COHERENCE</div>
+    <div class="chip"><img src="media/logo-symbol.png" alt=""/> COHERENCE</div>
     <div class="st eyebrow">The Opportunity</div>
     <h2 class="st">A real whitespace, and nobody is standing in it.</h2>
     <p class="st sub">There is no gathering for people who are simultaneously <strong>spiritual, technological, and entrepreneurial</strong>. COHERENCE sits between wellness retreats, startup conferences, transformational festivals, and creator communities, borrowing the best of each.</p>
@@ -368,46 +372,35 @@
   </section>
 
   <!-- 07 · the land -->
-  <section class="slide">
-    <div class="chip"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7.5" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="20" r="2.4" fill="#D4AF37"/></svg> COHERENCE</div>
-    <div class="split">
-      <div>
-        <div class="st eyebrow">The Place</div>
-        <h2 class="st">Reveille Peak Ranch.</h2>
-        <div class="st poem" style="font-size:clamp(1.1rem,2.3cqw,2rem);margin-top:.5em"><em>Reveille</em> means "to awaken."</div>
-        <ul class="st blist">
-          <li><b>1,300 acres</b> of Texas Hill Country, one hour from Austin</li>
-          <li>Overlooks <b>Lake Buchanan and Inks Lake</b>, on ancient Llano Uplift granite</li>
-          <li><b>Built event infrastructure:</b> camping, RV hookups, power, water, permits</li>
-          <li>Held on the <b>Spring Equinox</b>: balance, renewal, emergence</li>
-        </ul>
-      </div>
-      <div class="st" style="display:flex;align-items:center;justify-content:center">
-        <svg viewBox="0 0 300 300" fill="none" style="width:min(100%,clamp(180px,30cqw,340px))">
-          <circle cx="150" cy="150" r="132" stroke="#5fc4d2" stroke-opacity=".25" stroke-width="1"/>
-          <circle cx="150" cy="150" r="96" stroke="#5fc4d2" stroke-opacity=".35" stroke-width="1.2"/>
-          <path d="M40 210 L95 140 L128 176 L168 108 L214 172 L260 210" stroke="#8fd7e0" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
-          <path d="M40 226 C90 218,210 218,260 226" stroke="#1B8E9F" stroke-width="1.6" stroke-linecap="round" stroke-opacity=".8"/>
-          <circle cx="168" cy="108" r="4" fill="#D4AF37"/>
-          <circle cx="150" cy="66" r="12" stroke="#e8c85e" stroke-width="1.6"/>
-          <text x="150" y="262" text-anchor="middle" fill="#8fd7e0" font-family="Montserrat,Arial" font-size="11" letter-spacing="4" font-weight="600">TEXAS HILL COUNTRY</text>
-        </svg>
-      </div>
+  <section class="slide photo">
+    <div class="bg"></div>
+    <div class="shade" style="background:linear-gradient(90deg,rgba(23,16,9,.82) 0%,rgba(23,16,9,.55) 55%,rgba(23,16,9,.25) 100%)"></div>
+    <div class="chip"><img src="media/logo-symbol.png" alt=""/> COHERENCE</div>
+    <div style="max-width:58%">
+      <div class="st eyebrow">The Place</div>
+      <h2 class="st">Reveille Peak Ranch.</h2>
+      <div class="st poem" style="font-size:clamp(1.1rem,2.3cqw,2rem);margin-top:.5em"><em>Reveille</em> means "to awaken."</div>
+      <ul class="st blist">
+        <li><b>1,300 acres</b> of Texas Hill Country, one hour from Austin</li>
+        <li>Overlooks <b>Lake Buchanan and Inks Lake</b>, on ancient Llano Uplift granite</li>
+        <li><b>Built event infrastructure:</b> camping, RV hookups, power, water, permits</li>
+        <li>Held on the <b>Spring Equinox</b>: balance, renewal, emergence</li>
+      </ul>
     </div>
     <div class="sec">06 · Place</div><div class="fd">Investment Deck</div>
   </section>
 
-  <!-- 08 · three days -->
+  <!-- 08 · the days -->
   <section class="slide">
-    <div class="chip"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7.5" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="20" r="2.4" fill="#D4AF37"/></svg> COHERENCE</div>
+    <div class="chip"><img src="media/logo-symbol.png" alt=""/> COHERENCE</div>
     <div class="st eyebrow">The Arc</div>
     <h2 class="st">Gathering, deepening, emerging.</h2>
     <div class="st days">
-      <div class="day"><div class="dn">Day One</div><h3>Grounding</h3>
-        <p>Arrival and land acknowledgment. Welcome dinner, opening circle, first keynote, acoustic music under the stars.</p></div>
-      <div class="day"><div class="dn">Day Two</div><h3>Deepening</h3>
-        <p>Dawn meditation. Parallel workshop tracks, healing arts, collaboration sessions. DJ sets into the night.</p></div>
-      <div class="day"><div class="dn">Day Three</div><h3>Emergence</h3>
+      <div class="day"><div class="dn">Grounding</div><h3>Arrival</h3>
+        <p>Land acknowledgment. Welcome dinner, opening circle, first keynote, acoustic music under the stars.</p></div>
+      <div class="day"><div class="dn">Deepening</div><h3>The work</h3>
+        <p>Dawn meditation. Parallel workshop tracks, healing arts, collaboration sessions. Ambient sets into the night.</p></div>
+      <div class="day"><div class="dn">Emergence</div><h3>What leaves with us</h3>
         <p>Sunrise silence. Project circles, integration, commitments. Closing ceremony and community photo.</p></div>
     </div>
     <div class="st statrow">
@@ -420,7 +413,7 @@
 
   <!-- 09 · programming architecture -->
   <section class="slide light">
-    <div class="chip"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7.5" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="20" r="2.4" fill="#D4AF37"/></svg> COHERENCE</div>
+    <div class="chip"><img src="media/logo-symbol.png" alt=""/> COHERENCE</div>
     <div class="st eyebrow">The Lineup</div>
     <h2 class="st">Three layers of curation.</h2>
     <div class="st layers">
@@ -429,29 +422,29 @@
       <div class="layer"><div class="n">15+</div><h3>Artists</h3><p>Acoustic sets, ambient DJs, live band, projection and installation art.</p></div>
     </div>
     <div class="st tracks">
-      <div class="track"><span class="dot" style="background:var(--lavender)"></span><span class="t">Meditation &amp; Mindfulness</span><span class="c">8</span></div>
-      <div class="track"><span class="dot" style="background:var(--lime)"></span><span class="t">Spiritual Technology</span><span class="c">8</span></div>
+      <div class="track"><span class="dot" style="background:var(--rose)"></span><span class="t">Meditation &amp; Mindfulness</span><span class="c">8</span></div>
+      <div class="track"><span class="dot" style="background:var(--euca)"></span><span class="t">Spiritual Technology</span><span class="c">8</span></div>
       <div class="track"><span class="dot" style="background:var(--sage)"></span><span class="t">Somatic &amp; Body Work</span><span class="c">6</span></div>
-      <div class="track"><span class="dot" style="background:var(--coral)"></span><span class="t">Arts &amp; Creativity</span><span class="c">6</span></div>
-      <div class="track"><span class="dot" style="background:var(--navy)"></span><span class="t">Business &amp; Collaboration</span><span class="c">5</span></div>
-      <div class="track"><span class="dot" style="background:var(--teal)"></span><span class="t">Relationship &amp; Connection</span><span class="c">5</span></div>
-      <div class="track"><span class="dot" style="background:var(--brown)"></span><span class="t">Indigenous Wisdom</span><span class="c">4</span></div>
-      <div class="track"><span class="dot" style="background:var(--gold)"></span><span class="t">Healing Modalities</span><span class="c">4</span></div>
-      <div class="track"><span class="dot" style="background:var(--indigo)"></span><span class="t">Philosophy &amp; Worldview</span><span class="c">4</span></div>
+      <div class="track"><span class="dot" style="background:var(--wine)"></span><span class="t">Arts &amp; Creativity</span><span class="c">6</span></div>
+      <div class="track"><span class="dot" style="background:var(--olive)"></span><span class="t">Business &amp; Collaboration</span><span class="c">5</span></div>
+      <div class="track"><span class="dot" style="background:var(--clay)"></span><span class="t">Relationship &amp; Connection</span><span class="c">5</span></div>
+      <div class="track"><span class="dot" style="background:var(--umber-c)"></span><span class="t">Indigenous Wisdom</span><span class="c">4</span></div>
+      <div class="track"><span class="dot" style="background:var(--ochre)"></span><span class="t">Healing Modalities</span><span class="c">4</span></div>
+      <div class="track"><span class="dot" style="background:var(--sand)"></span><span class="t">Philosophy &amp; Worldview</span><span class="c">4</span></div>
     </div>
     <div class="sec">08 · Lineup</div><div class="fd">Investment Deck</div>
   </section>
 
   <!-- 10 · community engine -->
   <section class="slide">
-    <div class="chip"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7.5" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="20" r="2.4" fill="#D4AF37"/></svg> COHERENCE</div>
+    <div class="chip"><img src="media/logo-symbol.png" alt=""/> COHERENCE</div>
     <div class="st eyebrow">The Engine</div>
-    <h2 class="st">The gathering is three days. The community is the product.</h2>
+    <h2 class="st">The gathering is days. The community is the product.</h2>
     <div class="st arc">
       <div class="phase"><div class="pn">Before · 60 days</div><h3>Pods form</h3>
         <ul><li>Every attendee joins a pod of 10 to 15</li><li>Cohorts bond online before arrival</li><li>Intention setting and storytelling</li></ul></div>
       <div class="phase"><div class="pn">During</div><h3>Belonging rituals</h3>
-        <ul><li>Pods share meals and bonfire time</li><li>Affinity groups self-organize</li><li>Project circles on day three</li></ul></div>
+        <ul><li>Pods share meals and bonfire time</li><li>Affinity groups self-organize</li><li>Project circles before departure</li></ul></div>
       <div class="phase"><div class="pn">After · Ongoing</div><h3>Momentum holds</h3>
         <ul><li>Monthly cohort calls, regional meetups</li><li>Collaboration and mentorship pairings</li><li>Target: 45%+ repeat attendance</li></ul></div>
     </div>
@@ -460,7 +453,7 @@
 
   <!-- 11 · business model -->
   <section class="slide light">
-    <div class="chip"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7.5" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="20" r="2.4" fill="#D4AF37"/></svg> COHERENCE</div>
+    <div class="chip"><img src="media/logo-symbol.png" alt=""/> COHERENCE</div>
     <div class="st eyebrow">Business Model</div>
     <h2 class="st">Priced for belonging, built for margin.</h2>
     <div class="st split" style="align-items:start;gap:clamp(20px,3cqw,48px)">
@@ -485,7 +478,7 @@
 
   <!-- 12 · financials -->
   <section class="slide light">
-    <div class="chip"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7.5" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="20" r="2.4" fill="#D4AF37"/></svg> COHERENCE</div>
+    <div class="chip"><img src="media/logo-symbol.png" alt=""/> COHERENCE</div>
     <div class="st eyebrow">Financials · Year One</div>
     <h2 class="st">Profitable at the first gathering.</h2>
     <div class="st split" style="align-items:start;gap:clamp(20px,3cqw,48px)">
@@ -514,7 +507,7 @@
 
   <!-- 13 · moats -->
   <section class="slide">
-    <div class="chip"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7.5" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="20" r="2.4" fill="#D4AF37"/></svg> COHERENCE</div>
+    <div class="chip"><img src="media/logo-symbol.png" alt=""/> COHERENCE</div>
     <div class="st eyebrow">Defensibility</div>
     <h2 class="st">Why this holds.</h2>
     <ul class="st blist" style="max-width:56ch">
@@ -529,7 +522,7 @@
 
   <!-- 14 · lineage -->
   <section class="slide">
-    <div class="chip"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7.5" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="20" r="2.4" fill="#D4AF37"/></svg> COHERENCE</div>
+    <div class="chip"><img src="media/logo-symbol.png" alt=""/> COHERENCE</div>
     <div class="st eyebrow">Lineage</div>
     <h2 class="st">Produced by IMXP.</h2>
     <p class="st sub">COHERENCE is designed and produced by IMXP, the team creating the marquee celestial and transformational gatherings of this decade. The event playbook, the speaker network, and the community platform already exist.</p>
@@ -543,25 +536,26 @@
 
   <!-- 15 · roadmap -->
   <section class="slide light">
-    <div class="chip"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7.5" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="20" r="2.4" fill="#D4AF37"/></svg> COHERENCE</div>
+    <div class="chip"><img src="media/logo-symbol.png" alt=""/> COHERENCE</div>
     <div class="st eyebrow">Roadmap</div>
     <h2 class="st">Year one is the seed.</h2>
     <div class="st arc" style="margin-top:clamp(22px,4.4cqh,46px)">
-      <div class="phase" style="border-top-color:var(--teal)"><div class="pn" style="color:var(--teal)">2027</div><h3 style="color:var(--ink)">Inaugural gathering</h3>
-        <p>650 attendees at Reveille Peak. Establish the brand, the pods, and the annual rhythm. Profitable in year one.</p></div>
-      <div class="phase" style="border-top-color:var(--teal)"><div class="pn" style="color:var(--teal)">2028</div><h3 style="color:var(--ink)">Evolution, not reinvention</h3>
-        <p>Grow attendance on a proven container. Deepen institutional partnerships and sponsorships. Alumni return as mentors.</p></div>
-      <div class="phase" style="border-top-color:var(--gold)"><div class="pn" style="color:var(--gold)">2029+</div><h3 style="color:var(--ink)">The coherence network</h3>
-        <p>Regional chapters, online experiences, and a year-round community platform on IMXP infrastructure.</p></div>
+      <div class="phase" style="border-top-color:var(--copper-deep)"><div class="pn" style="color:var(--copper-deep)">2027</div><h3 style="color:var(--ink)">Inaugural gathering</h3>
+        <p style="color:var(--ink-dim)">650 attendees at Reveille Peak. Establish the brand, the pods, and the annual rhythm. Profitable in year one.</p></div>
+      <div class="phase" style="border-top-color:var(--copper-deep)"><div class="pn" style="color:var(--copper-deep)">2028</div><h3 style="color:var(--ink)">Evolution, not reinvention</h3>
+        <p style="color:var(--ink-dim)">Grow attendance on a proven container. Deepen institutional partnerships and sponsorships. Alumni return as mentors.</p></div>
+      <div class="phase" style="border-top-color:var(--ochre)"><div class="pn" style="color:var(--copper-deep)">2029+</div><h3 style="color:var(--ink)">The coherence network</h3>
+        <p style="color:var(--ink-dim)">Regional chapters, online experiences, and a year-round community platform on IMXP infrastructure.</p></div>
     </div>
     <div class="sec">14 · Roadmap</div><div class="fd">Investment Deck</div>
   </section>
 
   <!-- 16 · close -->
-  <section class="slide center">
-    <div class="chip"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="7.5" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="20" r="2.4" fill="#D4AF37"/></svg></div>
-    <div class="st poem" style="font-size:clamp(2rem,5.4cqw,4.8rem)">Another way is <em>possible.</em></div>
-    <p class="st sub" style="max-width:44ch">Fragmentation is optional. The future is being built right now, together. Join us in building the gathering where it begins.</p>
+  <section class="slide photo center">
+    <div class="bg"></div><div class="shade"></div>
+    <img class="coverlogo" src="media/logo-symbol.png" alt="Coherence" />
+    <div class="st poem" style="font-size:clamp(1.9rem,5.2cqw,4.6rem)">Fragmentation is optional. <em>Another way is possible.</em></div>
+    <p class="st sub" style="max-width:46ch">The future is being built right now, together. Join us in building the gathering where it begins.</p>
     <div class="st contact">Mitch Morales · <a href="mailto:mitch@im-xp.com">mitch@im-xp.com</a></div>
     <div class="fd">Investment Deck</div>
   </section>
@@ -572,18 +566,18 @@
 <div id="dots"></div>
 <div class="arrows"><button id="prev" aria-label="Previous">‹</button><button id="next" aria-label="Next">›</button></div>
 
-<!-- email gate: same flow as the MSF and IMXP decks -->
+<!-- email gate: styled after coherencegathering.com's invitation flow -->
 <div id="gate">
   <div class="card">
-    <svg class="gmark" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="24" stroke="#5fc4d2" stroke-width="2"/><circle cx="30" cy="30" r="12" stroke="#5fc4d2" stroke-width="1.8"/><circle cx="30" cy="30" r="3.6" fill="#D4AF37"/></svg>
-    <div class="gsub">COHERENCE · Investment Deck</div>
-    <h2>View the deck</h2>
-    <p>Enter your details to continue.</p>
+    <img class="gmark" src="media/logo-symbol.png" alt="Coherence" />
+    <div class="gsub">Investment Deck</div>
+    <h2>Connected, in spirit.</h2>
+    <p>Enter your details to view the deck.</p>
     <form id="gateForm" novalidate>
       <input id="gateName" type="text" placeholder="Full name" autocomplete="name" />
-      <input id="gateEmail" type="email" placeholder="you@company.com" autocomplete="email" />
+      <input id="gateEmail" type="email" placeholder="your@email.com" autocomplete="email" />
       <div class="err" id="gateErr"></div>
-      <button type="submit" id="gateBtn">View deck →</button>
+      <button type="submit" id="gateBtn">View Deck</button>
     </form>
     <div class="fine">Details are kept private and used only to send updates.</div>
   </div>
@@ -603,7 +597,7 @@ function go(n){
   slides.forEach((s,k)=>s.classList.toggle('active',k===i));
   [...dots.children].forEach((d,k)=>d.classList.toggle('on',k===i));
   ctr.textContent=pad(i+1)+' / '+pad(slides.length);
-  /* the mandala turns and grows as the story advances */
+  /* the rings turn and grow as the story advances */
   const t=i/(slides.length-1);
   mandala.style.transform='rotate('+(t*90)+'deg) scale('+(1+t*0.22)+')';
   if(location.hash!=='#'+(i+1))history.replaceState(null,'','#'+(i+1));
