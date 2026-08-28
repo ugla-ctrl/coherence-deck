@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>COHERENCE · Investment Deck</title>
-<meta name="description" content="COHERENCE Gathering. Connected, in spirit. March 19-22, 2027 · Texas Hill Country." />
+<meta name="description" content="COHERENCE Gathering. Connected, in spirit. March 19-22, 2027 · Carson Creek Ranch, Austin, Texas." />
 <meta property="og:title" content="COHERENCE · Investment Deck" />
-<meta property="og:description" content="A gathering for designers of the New Earth. March 19-22, 2027 · Texas Hill Country." />
+<meta property="og:description" content="A gathering for designers of the New Earth. March 19-22, 2027 · Carson Creek Ranch, Austin, Texas." />
 <meta property="og:image" content="media/hero-bg.png" />
 <meta name="theme-color" content="#201712" />
 <link rel="icon" href="media/logo-symbol.png" />
@@ -63,7 +63,7 @@
   .slide.photo .bg{position:absolute;inset:0;z-index:0;background:url('media/hero-bg.png') center/cover no-repeat}
   .slide.photo .shade{position:absolute;inset:0;z-index:1;
     background:linear-gradient(180deg,rgba(23,16,9,.5) 0%,rgba(23,16,9,.28) 40%,rgba(23,16,9,.72) 100%)}
-  .slide.photo>*:not(.bg):not(.shade):not(.chip):not(.fd):not(.sec):not(.coverlogo){position:relative;z-index:2}
+  .slide.photo>*:not(.bg):not(.shade):not(.chip):not(.fd):not(.sec):not(.coverlogo):not(.credit){position:relative;z-index:2}
 
   /* ---- slide chrome ---- */
   .chip{position:absolute;top:clamp(20px,4.2cqh,44px);left:var(--edge);z-index:3;display:flex;align-items:center;gap:.7em;
@@ -75,6 +75,9 @@
   .sec{position:absolute;bottom:clamp(18px,3.8cqh,40px);left:var(--edge);z-index:3;
     font-weight:500;font-size:clamp(.58rem,.82cqw,.76rem);letter-spacing:.24em;text-transform:uppercase;color:var(--cream-faint)}
   .slide.light .fd,.slide.light .sec{color:rgba(32,23,18,.4)}
+  .credit{position:absolute;bottom:clamp(18px,3.8cqh,40px);left:50%;transform:translateX(-50%);z-index:3;
+    white-space:nowrap;font-weight:400;font-size:clamp(.5rem,.68cqw,.62rem);letter-spacing:.1em;
+    color:rgba(246,236,222,.34)}
 
   /* ---- type system ---- */
   .eyebrow{font-weight:500;font-size:clamp(.64rem,.95cqw,.86rem);letter-spacing:.32em;color:var(--copper-bright);
@@ -263,14 +266,14 @@
   <section class="slide photo center active">
     <div class="bg"></div><div class="shade"></div>
     <img class="coverlogo" src="media/logo-symbol.png" alt="Coherence" />
-    <div class="st eyebrow" style="color:var(--cream-dim)">March 19 to 22, 2027 · Texas Hill Country</div>
+    <div class="st eyebrow" style="color:var(--cream-dim)">March 19 to 22, 2027 · Austin, Texas</div>
     <h1 class="st">COHERENCE</h1>
     <div class="st tagline" style="margin-top:.2em">Connected, in spirit.</div>
     <p class="st sub" style="max-width:46ch">A 4-day gathering for designers of the New Earth to align, connect, and co-create on the Spring Equinox.</p>
     <div class="st statrow" style="justify-content:center;margin-top:clamp(20px,4cqh,44px)">
       <div class="stat"><div class="n">650</div><div class="l">Attendees, year one</div></div>
-      <div class="stat"><div class="n">1,300 acres</div><div class="l">Reveille Peak Ranch</div></div>
-      <div class="stat"><div class="n">1 hour</div><div class="l">From Austin</div></div>
+      <div class="stat"><div class="n">60 acres</div><div class="l">On the Colorado River</div></div>
+      <div class="stat"><div class="n">Minutes</div><div class="l">From downtown Austin</div></div>
     </div>
     <div class="fd">Investment Deck</div>
   </section>
@@ -373,21 +376,37 @@
 
   <!-- 07 · the land -->
   <section class="slide photo">
-    <div class="bg"></div>
-    <div class="shade" style="background:linear-gradient(90deg,rgba(23,16,9,.82) 0%,rgba(23,16,9,.55) 55%,rgba(23,16,9,.25) 100%)"></div>
+    <div class="bg" style="background-image:url('media/venue-river.jpg')"></div>
+    <div class="shade" style="background:linear-gradient(90deg,rgba(23,16,9,.88) 0%,rgba(23,16,9,.62) 55%,rgba(23,16,9,.3) 100%)"></div>
     <div class="chip"><img src="media/logo-symbol.png" alt=""/> COHERENCE</div>
     <div style="max-width:58%">
       <div class="st eyebrow">The Place</div>
-      <h2 class="st">Reveille Peak Ranch.</h2>
-      <div class="st poem" style="font-size:clamp(1.1rem,2.3cqw,2rem);margin-top:.5em"><em>Reveille</em> means "to awaken."</div>
+      <h2 class="st">Carson Creek Ranch.</h2>
+      <div class="st poem" style="font-size:clamp(1.1rem,2.3cqw,2rem);margin-top:.5em">Held by one family on this river <em>since 1851.</em></div>
       <ul class="st blist">
-        <li><b>1,300 acres</b> of Texas Hill Country, one hour from Austin</li>
-        <li>Overlooks <b>Lake Buchanan and Inks Lake</b>, on ancient Llano Uplift granite</li>
-        <li><b>Built event infrastructure:</b> camping, RV hookups, power, water, permits</li>
+        <li><b>60 acres</b> on the banks of the Colorado River, in Austin</li>
+        <li>A <b>Texas Century Ranch</b>, worked by the same family for 150 years</li>
+        <li><b>Waterfront amphitheater</b> under old pecans, 2,000 on grass terraces</li>
+        <li><b>Proven festival ground:</b> camping, parking, power, permits, in place</li>
         <li>Held on the <b>Spring Equinox</b>: balance, renewal, emergence</li>
       </ul>
     </div>
+    <div class="credit">Colorado River at Montopolis, Austin · photo Larry D. Moore, CC BY 4.0</div>
     <div class="sec">06 · Place</div><div class="fd">Investment Deck</div>
+  </section>
+
+  <!-- 08 · access -->
+  <section class="slide light">
+    <div class="chip"><img src="media/logo-symbol.png" alt=""/> COHERENCE</div>
+    <div class="st eyebrow">Access</div>
+    <h2 class="st">A destination gathering without the journey.</h2>
+    <p class="st sub">Most transformational gatherings ask for two travel days before anyone arrives. Carson Creek Ranch sits <strong>minutes from downtown Austin and Austin-Bergstrom International</strong>, so a guest can land and be on the land the same hour. Lower friction, higher conversion, national reach.</p>
+    <div class="st statrow">
+      <div class="stat"><div class="n">Minutes</div><div class="l">From ABIA and downtown</div></div>
+      <div class="stat"><div class="n">On site</div><div class="l">Tent and trailer camping</div></div>
+      <div class="stat"><div class="n">Austin</div><div class="l">The conscious-builder hub itself</div></div>
+    </div>
+    <div class="sec">07 · Access</div><div class="fd">Investment Deck</div>
   </section>
 
   <!-- 08 · the days -->
@@ -408,7 +427,7 @@
       <div class="stat"><div class="n">36</div><div class="l">Workshop sessions</div></div>
       <div class="stat"><div class="n">5</div><div class="l">Keynote visionaries</div></div>
     </div>
-    <div class="sec">07 · Program</div><div class="fd">Investment Deck</div>
+    <div class="sec">08 · Program</div><div class="fd">Investment Deck</div>
   </section>
 
   <!-- 09 · programming architecture -->
@@ -432,7 +451,7 @@
       <div class="track"><span class="dot" style="background:var(--ochre)"></span><span class="t">Healing Modalities</span><span class="c">4</span></div>
       <div class="track"><span class="dot" style="background:var(--sand)"></span><span class="t">Philosophy &amp; Worldview</span><span class="c">4</span></div>
     </div>
-    <div class="sec">08 · Lineup</div><div class="fd">Investment Deck</div>
+    <div class="sec">09 · Lineup</div><div class="fd">Investment Deck</div>
   </section>
 
   <!-- 10 · community engine -->
@@ -448,7 +467,7 @@
       <div class="phase"><div class="pn">After · Ongoing</div><h3>Momentum holds</h3>
         <ul><li>Monthly cohort calls, regional meetups</li><li>Collaboration and mentorship pairings</li><li>Target: 45%+ repeat attendance</li></ul></div>
     </div>
-    <div class="sec">09 · Community</div><div class="fd">Investment Deck</div>
+    <div class="sec">10 · Community</div><div class="fd">Investment Deck</div>
   </section>
 
   <!-- 11 · business model -->
@@ -473,7 +492,7 @@
         <tr class="total"><td>Gross revenue</td><td class="num" style="text-align:right">$591,670</td></tr>
       </table>
     </div>
-    <div class="sec">10 · Model</div><div class="fd">Investment Deck</div>
+    <div class="sec">11 · Model</div><div class="fd">Investment Deck</div>
   </section>
 
   <!-- 12 · financials -->
@@ -502,7 +521,7 @@
         </ul>
       </div>
     </div>
-    <div class="sec">11 · Financials</div><div class="fd">Investment Deck</div>
+    <div class="sec">12 · Financials</div><div class="fd">Investment Deck</div>
   </section>
 
   <!-- 13 · moats -->
@@ -511,13 +530,13 @@
     <div class="st eyebrow">Defensibility</div>
     <h2 class="st">Why this holds.</h2>
     <ul class="st blist" style="max-width:56ch">
-      <li><b>Location lock:</b> exclusive multi-year partnership with Reveille Peak Ranch</li>
+      <li><b>Location lock:</b> exclusive multi-year partnership with Carson Creek Ranch</li>
       <li><b>Community lock:</b> pods, cohorts, and post-event engagement drive repeat attendance</li>
       <li><b>Founder brand:</b> the team behind Texas Eclipse and Iceland Eclipse, delivered at scale</li>
       <li><b>Institutional roots:</b> Austin's tech, healing arts, DAO, and university communities</li>
       <li><b>Timing:</b> first major gathering in the consciousness &times; technology space</li>
     </ul>
-    <div class="sec">12 · Moats</div><div class="fd">Investment Deck</div>
+    <div class="sec">13 · Moats</div><div class="fd">Investment Deck</div>
   </section>
 
   <!-- 14 · lineage -->
@@ -531,7 +550,7 @@
       <div class="stat"><div class="n">Delivered</div><div class="l">Iceland Eclipse · August 2026</div></div>
       <div class="stat"><div class="n">50K+</div><div class="l">Global community · 70+ countries</div></div>
     </div>
-    <div class="sec">13 · Team</div><div class="fd">Investment Deck</div>
+    <div class="sec">14 · Team</div><div class="fd">Investment Deck</div>
   </section>
 
   <!-- 15 · roadmap -->
@@ -541,13 +560,13 @@
     <h2 class="st">Year one is the seed.</h2>
     <div class="st arc" style="margin-top:clamp(22px,4.4cqh,46px)">
       <div class="phase" style="border-top-color:var(--copper-deep)"><div class="pn" style="color:var(--copper-deep)">2027</div><h3 style="color:var(--ink)">Inaugural gathering</h3>
-        <p style="color:var(--ink-dim)">650 attendees at Reveille Peak. Establish the brand, the pods, and the annual rhythm. Profitable in year one.</p></div>
+        <p style="color:var(--ink-dim)">650 attendees at Carson Creek Ranch. Establish the brand, the pods, and the annual rhythm. Profitable in year one.</p></div>
       <div class="phase" style="border-top-color:var(--copper-deep)"><div class="pn" style="color:var(--copper-deep)">2028</div><h3 style="color:var(--ink)">Evolution, not reinvention</h3>
         <p style="color:var(--ink-dim)">Grow attendance on a proven container. Deepen institutional partnerships and sponsorships. Alumni return as mentors.</p></div>
       <div class="phase" style="border-top-color:var(--ochre)"><div class="pn" style="color:var(--copper-deep)">2029+</div><h3 style="color:var(--ink)">The coherence network</h3>
         <p style="color:var(--ink-dim)">Regional chapters, online experiences, and a year-round community platform on IMXP infrastructure.</p></div>
     </div>
-    <div class="sec">14 · Roadmap</div><div class="fd">Investment Deck</div>
+    <div class="sec">15 · Roadmap</div><div class="fd">Investment Deck</div>
   </section>
 
   <!-- 16 · close -->
@@ -562,7 +581,7 @@
 
 </div></div>
 
-<div id="ctr">01 / 16</div>
+<div id="ctr">01 / 17</div>
 <div id="dots"></div>
 <div class="arrows"><button id="prev" aria-label="Previous">‹</button><button id="next" aria-label="Next">›</button></div>
 
