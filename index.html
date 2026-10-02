@@ -730,7 +730,7 @@ go(start>=1&&start<=slides.length?start-1:0);
     if(!re.test(v)){err.textContent='Please enter a valid email address.';email.focus();return;}
     err.textContent='';
     btn.disabled=true; btn.textContent='Opening…';
-    const payload={email:v, name:n||null, source:'coherence-deck-gate', referrer:document.referrer||null, user_agent:navigator.userAgent};
+    const payload={email:v, name:n||null, source:'coherence-investment-gate', referrer:document.referrer||null, user_agent:navigator.userAgent};
     fetch(SUPA_URL+'/rest/v1/coherence_deck_leads',{
       method:'POST',
       headers:{'apikey':SUPA_KEY,'Authorization':'Bearer '+SUPA_KEY,'Content-Type':'application/json','Prefer':'return=minimal'},
