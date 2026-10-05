@@ -710,13 +710,17 @@ go(start>=1&&start<=slides.length?start-1:0);
     }catch(_){}
   }
   let seen=false;try{seen=!!localStorage.getItem(KEY);}catch(_){}
-  if(seen){gate.classList.add('hide');let saved=null;try{saved=localStorage.getItem(EMAIL_KEY);}catch(_){}trackViews(saved);return;}
+  let saved=null;try{saved=localStorage.getItem(EMAIL_KEY);}catch(_){}
+  /* unlocked before emails were saved: ask once, so every recorded view has an email address */
+  const returning=seen&&!saved;
+  if(seen&&saved){gate.classList.add('hide');trackViews(saved);return;}
   const form=document.getElementById('gateForm');
   const nameEl=document.getElementById('gateName');
   const email=document.getElementById('gateEmail');
   const err=document.getElementById('gateErr');
   const btn=document.getElementById('gateBtn');
   const re=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if(returning){const h=gate.querySelector('h2'),p=gate.querySelector('p');if(h)h.textContent='Welcome back.';if(p)p.textContent='Please confirm your email to continue.';nameEl.style.display='none';btn.textContent='Continue';}
 
   function unlock(viewerEmail){
     try{localStorage.setItem(KEY,'1');if(viewerEmail)localStorage.setItem(EMAIL_KEY,viewerEmail);}catch(_){}
@@ -731,6 +735,7 @@ go(start>=1&&start<=slides.length?start-1:0);
     if(!re.test(v)){err.textContent='Please enter a valid email address.';email.focus();return;}
     err.textContent='';
     btn.disabled=true; btn.textContent='Opening…';
+    if(returning){unlock(v);return;}   /* already a lead: just attach the email to this visit */
     const payload={email:v, name:n||null, source:'coherence-investment-gate', referrer:document.referrer||null, user_agent:navigator.userAgent};
     fetch(SUPA_URL+'/rest/v1/coherence_deck_leads',{
       method:'POST',
